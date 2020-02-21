@@ -1,0 +1,14 @@
+{
+    "name": "he110/portable-url-shortener",
+    "description": "Standalone PHP library with Sqlite. Allows you to create and store links",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ilya S. Zobenko",
+            "email": "ilya@zobenko.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {}
+}

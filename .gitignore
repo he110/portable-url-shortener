@@ -1,0 +1,5 @@
+/vendor/
+/.idea
+clover.xml
+/.phpunit.result.cache
+logs/*
