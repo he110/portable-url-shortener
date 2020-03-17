@@ -2,4 +2,6 @@
 /.idea
 clover.xml
 /.phpunit.result.cache
-logs/*
+./logs
+./tmp
+.bettercodehub.yml

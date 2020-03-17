@@ -9,6 +9,19 @@
             "email": "ilya@zobenko.ru"
         }
     ],
-    "require": {},
-    "autoload": {}
+    "require": {
+        "catfan/medoo": "^1.7",
+        "psr/log": "^1.1",
+        "duncan3dc/logger-aware-trait": "^0.2.0",
+        "hashids/hashids": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {"He110\\UrlShortener\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"He110\\UrlShortenerTests\\": "tests/"}
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
 }
