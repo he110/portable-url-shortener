@@ -14,7 +14,7 @@
         "catfan/medoo": "^1.7",
         "psr/log": "^1.1",
         "duncan3dc/logger-aware-trait": "^0.2.0",
-        "hashids/hashids": "^4.0"
+        "hashids/hashids": "^3.0"
     },
     "autoload": {
         "psr-4": {"He110\\UrlShortener\\": "src/"}
