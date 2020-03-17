@@ -4,4 +4,3 @@ clover.xml
 /.phpunit.result.cache
 ./logs
 ./tmp
-.bettercodehub.yml
