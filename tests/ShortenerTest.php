@@ -16,7 +16,7 @@ class ShortenerTest extends TestCase
     /** @var Shortener */
     private $service;
 
-    private $databaseFile = 'tmp/test.db';
+    private $databaseFile = 'test.db';
 
     public function setUp(): void
     {
