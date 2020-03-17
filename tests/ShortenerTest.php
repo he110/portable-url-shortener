@@ -58,4 +58,11 @@ class ShortenerTest extends TestCase
         $result = $this->service->getFullUrl($hash);
         $this->assertSame($url, $result);
     }
+
+    /** @test */
+    public function can_return_null_for_non_existed_hash()
+    {
+        $result = $this->service->getFullUrl('non_existed');
+        $this->assertNull($result);
+    }
 }
