@@ -12,12 +12,20 @@ Install the latest version with
 $ composer require he110/portable-url-shortener
 ```
 
+Or if you have cloned whole repo, do not forget to use composer install command.
+
+```bash
+$ composer install
+```
+
 ## Basic Usage
 
 ### Save URL and get a hash
 
 ```php
 <?php
+
+require_once 'vendor/autoload.php';
 
 use He110\UrlShortener\Shortener;
 
@@ -37,6 +45,8 @@ echo sprintf('https://your-new.url/go/%s', $hash);
 
 ```php
 <?php
+
+require_once 'vendor/autoload.php';
 
 use He110\UrlShortener\Shortener;
 
@@ -58,6 +68,10 @@ if ($url = $service->getFullUrl('lQc2f9')) {
 ### Requirements
 
 - Communication Tools works with PHP 7.1 or above.
+
+- mbstring
+
+- pdo-sqlite
 
 ### Submitting bugs and feature requests
 
