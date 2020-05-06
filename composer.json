@@ -11,10 +11,17 @@
     ],
     "require": {
         "php": "^7.1",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
         "catfan/medoo": "^1.7",
         "psr/log": "^1.1",
         "duncan3dc/logger-aware-trait": "^0.2.0",
         "hashids/hashids": "^3.0"
+    },
+    "suggest": {
+        "ext-bcmath": "Required to use BC Math arbitrary precision mathematics (*).",
+        "ext-gmp": "Required to use GNU multiple precision mathematics (*)."
     },
     "autoload": {
         "psr-4": {"He110\\UrlShortener\\": "src/"}
