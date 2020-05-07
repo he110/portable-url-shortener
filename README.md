@@ -67,7 +67,7 @@ if ($url = $service->getFullUrl('lQc2f9')) {
 
 ### Requirements
 
-- Communication Tools works with PHP 7.1 or above.
+- Communication Tools works with PHP 7.2 or above.
 
 - mbstring
 
@@ -79,4 +79,4 @@ Bugs and feature request are tracked on [GitHub](https://github.com/he110/portab
 
 ### Author
 
-Ilya S. Zobenko - <ilya@zobenko.ru> - <http://twitter.com/he110_todd>
+Elijah S. Zobenko - <ilya@zobenko.ru> - <http://twitter.com/he110_todd>
