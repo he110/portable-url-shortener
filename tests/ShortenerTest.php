@@ -80,6 +80,6 @@ class ShortenerTest extends TestCase
         $result = $this->service->generateHash('https://another.domain/');
 
         $this->assertNotEquals($currentLength, $newLength);
-        $this->assertTrue(strlen($result) == $newLength, 'Result length is '.strlen($result).' but expected '.$newLength);
+        $this->assertTrue(strlen($result) == $newLength);
     }
 }
