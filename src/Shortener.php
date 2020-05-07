@@ -31,7 +31,7 @@ class Shortener
      *
      * @param string $databaseFilePath
      */
-    public function __construct(string $databaseFilePath)
+    public function __construct(string $databaseFilePath, int $hashLength = 4)
     {
         $this->connection = new Medoo([
             'database_type' => 'sqlite',
@@ -48,6 +48,26 @@ class Shortener
                 'NOT NULL'
             ),
         ));
+
+        $this->hashLength = $hashLength;
+    }
+
+    /**
+     * @return int
+     */
+    public function getHashLength(): int
+    {
+        return $this->hashLength;
+    }
+
+    /**
+     * @param int $hashLength
+     * @return Shortener
+     */
+    public function setHashLength(int $hashLength): self
+    {
+        $this->hashLength = $hashLength;
+        return $this;
     }
 
     /**
@@ -91,7 +111,7 @@ class Shortener
      */
     protected function getHashByDigit(int $digit): string
     {
-        $service = new Hashids();
-        return $service->encode($digit, $digit+1, $digit+2);
+        $service = new Hashids('', $this->getHashLength());
+        return $service->encode($digit);
     }
 }

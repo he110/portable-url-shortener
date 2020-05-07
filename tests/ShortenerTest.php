@@ -65,4 +65,21 @@ class ShortenerTest extends TestCase
         $result = $this->service->getFullUrl('non_existed');
         $this->assertNull($result);
     }
+
+    /** @test */
+    public function can_change_hash_length()
+    {
+        $currentLength = $this->service->getHashLength();
+
+        $default = $this->service->generateHash('https://example.domain/');
+        $this->assertTrue(strlen($default) == $currentLength);
+
+        $this->service->setHashLength($currentLength+6);
+        $newLength = $this->service->getHashLength();
+
+        $result = $this->service->generateHash('https://another.domain/');
+
+        $this->assertNotEquals($currentLength, $newLength);
+        $this->assertTrue(strlen($result) == $newLength, 'Result length is '.strlen($result).' but expected '.$newLength);
+    }
 }
