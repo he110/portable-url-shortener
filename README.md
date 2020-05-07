@@ -63,6 +63,31 @@ if ($url = $service->getFullUrl('lQc2f9')) {
 
 ```
 
+### How to control hash minimal hash length
+
+By default length is set to `4`. But you can change it via default object constructor or using `setHashLength` method. 
+
+```php
+<?php
+
+require_once 'vendor/autoload.php';
+
+use He110\UrlShortener\Shortener;
+
+$pathToDatabaseFile = 'file_will_be_created.db';
+
+// Second arg for hash length
+$service = new Shortener($pathToDatabaseFile, 10);
+
+$url = 'https://very.long/and/#ugly?url=which&you=want&make=shorter';
+$hash = $service->generateHash($url); // WjnegYbwZ1
+
+$service->setHashLength(15);
+$url = 'https://another.long/and/#ugly?url=which&you=want&make=shorter';
+$hash = $service->generateHash($url); // LkQWjnegYbwZ1p0
+
+```
+
 ## About
 
 ### Requirements
